@@ -1,56 +1,84 @@
-此节点由抖音博主：绘画小子 制作。Wan2.2 图生视频增强节点，专门针对4步LoRA（如 lightx2v）的慢动作问题进行优化。
+<span id="chinese">
+此节点由抖音博主：绘画小子 制作。
+Wan2.2 图生视频增强节点，专门针对4步LoRA（如 lightx2v）的慢动作问题进行优化。
+🎯 解决的问题
+✅ 减少慢动作拖影：提升运动幅度15-30%
+✅ 保持画面亮度：增强算法不破坏亮度分布
+✅ 单帧输入优化：专为单帧图生视频设计
+✅ 即插即用：完全兼容原版Wan2.2工作流
+📦 安装
+方法1：ComfyUI Manager（推荐）
+打开ComfyUI Manager
+搜索 PainterI2V
+点击安装
+方法2：手动安装
+bash
+复制
+# 进入ComfyUI的custom_nodes目录
+cd ComfyUI/custom_nodes
 
+# 克隆仓库
+git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 
-
-\## 🎯 解决的问题
-
-
-
-\- ✅ \*\*减少慢动作拖影\*\*：提升运动幅度15-30%
-
-\- ✅ \*\*保持画面亮度\*\*：增强算法不破坏亮度分布
-
-\- ✅ \*\*单帧输入优化\*\*：专为单帧图生视频设计
-
-\- ✅ \*\*即插即用\*\*：完全兼容原版Wan2.2工作流
-
-
-
-\## 📦 安装
-
-
-
-\### 方法1：ComfyUI Manager（推荐）
-
-1\. 打开ComfyUI Manager
-
-2\. 搜索 `PainterI2V`
-
-3\. 点击安装
-
-
-
-\### 方法2：手动安装
-
-```bash
-
-\# 进入ComfyUI的custom\_nodes目录
-
-cd ComfyUI/custom\_nodes
-
-
-
-\# 克隆仓库
-
-git clone https://github.com/yourusername/ComfyUI-PainterI2V.git
-
-
-
-\# 重启ComfyUI
-
+# 重启ComfyUI
+🚀 使用方法
+替换节点：在工作流中将 WanImageToVideo 替换为 PainterI2V
+参数设置：
+motion_amplitude: 1.15（推荐起始值）
+其他参数与原版保持一致
+场景参数推荐：
+表格
+复制
+运动类型	推荐参数	示例提示词
+快速（跑步/跳跃）	1.25-1.35	"快速向前奔跑"
+正常（走路/挥手）	1.10-1.20	"流畅地行走"
+慢动作特效	0.8-0.9	"缓慢移动"
+提示词优化：
+明确描述运动节奏，如"快速奔跑"、"流畅行走"
+避免模糊描述如"移动"、"走动"
+📊 技术细节
+运动幅度参数表
+表格
+复制
+参数值	运动提升	亮度变化	适用场景
+1.0（原版）	0%	无	慢动作特效
+1.15（默认）	+15%	无	通用场景
+1.3	+30%	无	体育运动
+1.5	+50%	无	极限运动
+核心算法原理
+亮度保护的运动缩放：放大运动向量前分离亮度均值
+零latent初始化：严格保持4步LoRA的时序依赖链
+参考帧增强：使用reference_latents保持主体一致性，不约束运动
+🔧 进阶技巧
+最佳效果：配合强运动提示词使用
+运动过快：每次减少 motion_amplitude 0.05
+仍然偏慢：可适当增大到1.4
+亮度异常：确保 motion_amplitude ≥ 1.0（不建议<1.0）
+🤝 参与贡献
+欢迎提交Issue和PR！请提供：
+ComfyUI版本号
+LoRA模型名称
+示例工作流（JSON）
+输入/输出样例
+📄 许可证
+MIT License
+🙏 致谢
+Wan2.2 Team: For the amazing video generation model
+ComfyUI Community: For the flexible node system
+Issue Reporters: For helping refine this node
+<div align="center">
+如果这个项目对你有帮助，请给颗星 ⭐️ 支持一下！
+</div>
 
 🎨 ComfyUI-PainterI2V
-An enhanced Wan2.2 Image-to-Video node specifically designed to fix the slow-motion issue in 4-step LoRAs (like lightx2v).
+<div align="center">
+English | 中文
+https://github.com/princepainter/ComfyUI-PainterI2V/releases
+https://opensource.org/licenses/MIT
+https://github.com/comfyanonymous/ComfyUI
+</div>
+<span id="english">
+Wan2.2 Image-to-Video enhancement node that specifically fixes the slow-motion issue in 4-step LoRAs (e.g., lightx2v).
 🎯 Problems Solved
 ✅ Reduces Slow-Motion Drag: Increases motion amplitude by 15-30%
 ✅ Maintains Brightness Stability: Enhancement algorithm preserves brightness distribution
@@ -68,7 +96,7 @@ bash
 cd ComfyUI/custom_nodes
 
 # Clone the repository
-git clone https://github.com/yourusername/ComfyUI-PainterI2V.git
+git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 
 # Restart ComfyUI
 🚀 Usage
@@ -76,31 +104,39 @@ Replace Node: In your workflow, replace WanImageToVideo with PainterI2V
 Parameter Settings:
 motion_amplitude: 1.15 (Recommended starting value)
 Keep other parameters identical to the original
-Recommended Scenarios:
-Running, jumping (fast motion): motion_amplitude = 1.3
-Walking, waving (normal motion): motion_amplitude = 1.15
-Slow-motion effects: motion_amplitude = 0.9
-Prompt Optimization:
-Clearly describe motion rhythm, e.g., "quickly running", "smoothly walking"
-Avoid vague descriptions like "moving" or "walking"
-📊 Effects Comparison
+Scene-Specific Settings:
 表格
 复制
-Parameter	Motion Amplitude	Brightness Change	Use Case
-1.0 (Original)	100%	None	Slow motion
-1.15 (Recommended)	115%	None	General purpose
-1.3	130%	None	Fast motion
-1.5	150%	None	Extreme speed
-🔧 Technical Principles
-Brightness-Preserving Algorithm: Separates motion information from brightness mean, amplifying only motion amplitude
-Zero Latent Initialization: Strictly maintains 4-step LoRA's temporal dependency chain
-Reference Frame Enhancement: Maintains subject consistency through reference_latents
+Motion Type	Recommended Value	Example Prompt
+Fast (Running/Jumping)	1.25-1.35	"quickly running forward"
+Normal (Walking/Waving)	1.10-1.20	"smoothly walking"
+Slow Motion Effect	0.8-0.9	"moving slowly"
+Prompt Tips:
+Clearly describe motion rhythm (e.g., "quickly running", "smoothly walking")
+Avoid vague descriptions like "moving" or "walking"
+📊 Technical Details
+Motion Amplitude Scale
+表格
+复制
+Parameter	Motion Boost	Brightness Change	Best Use Case
+1.0 (Original)	0%	None	Slow motion effects
+1.15 (Default)	+15%	None	General purpose
+1.3	+30%	None	Sports & fast action
+1.5	+50%	None	Extreme motion
+Core Algorithm
+Brightness-Preserving Motion Scaling: Separates motion vectors from brightness mean before amplification
+Zero Latent Initialization: Maintains 4-step LoRA's strict temporal dependency chain
+Reference Frame Enhancement: Uses reference_latents for subject consistency without motion constraints
+🔧 Advanced Tips
+For Best Results: Combine with strong motion prompts
+If Motion Too Fast: Decrease motion_amplitude by 0.05 increments
+If Still Slow: Increase motion_amplitude up to 1.4 max
+Brightness Issues: Ensure motion_amplitude ≥ 1.0 (values < 1.0 not recommended)
 🤝 Contributing
-Issues and PRs are welcome!
+Issues and PRs are welcome! Please provide:
+ComfyUI version
+LoRA model name
+Example workflow (JSON)
+Sample input/output
 📄 License
 MIT License
-
-
-\# 🎨 ComfyUI-PainterI2V
-
-
