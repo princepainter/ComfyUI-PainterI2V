@@ -1,17 +1,23 @@
 此节点由抖音博主：绘画小子 制作。
-Wan2.2 图生视频增强节点，专门针对4步LoRA（如 lightx2v）的慢动作问题进行优化。
-🎯 解决的问题
-✅ 减少慢动作拖影：提升运动幅度15-30%
-✅ 保持画面亮度：增强算法不破坏亮度分布
-✅ 单帧输入优化：专为单帧图生视频设计
-✅ 即插即用：完全兼容原版Wan2.2工作流
-📦 安装
-方法1：ComfyUI Manager（推荐）
-打开ComfyUI Manager
-搜索 PainterI2V
-点击安装
-方法2：手动安装
+# Wan2.2 图生视频增强节点
 
+专门针对4步LoRA（如 lightx2v）的慢动作问题进行优化。
+
+## 🎯 解决的问题
+- ✅ 减少慢动作拖影：提升运动幅度15-30%
+- ✅ 保持画面亮度：增强算法不破坏亮度分布
+- ✅ 单帧输入优化：专为单帧图生视频设计
+- ✅ 即插即用：完全兼容原版Wan2.2工作流
+
+## 📦 安装
+
+### 方法1：ComfyUI Manager（推荐）
+1. 打开ComfyUI Manager
+2. 搜索 `PainterI2V`
+3. 点击安装
+
+### 方法2：手动安装
+```bash
 # 进入ComfyUI的custom_nodes目录
 cd ComfyUI/custom_nodes
 
@@ -19,11 +25,6 @@ cd ComfyUI/custom_nodes
 git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 
 # 重启ComfyUI
-🚀 使用方法
-替换节点：在工作流中将 WanImageToVideo 替换为 PainterI2V
-参数设置：
-motion_amplitude: 1.15（推荐起始值）
-其他参数与原版保持一致
 场景参数推荐：
 | 运动类型       | 推荐参数   | 示例提示词     |
 | -------------- | ---------- | -------------- |
@@ -123,6 +124,7 @@ Example workflow (JSON)
 Sample input/output
 📄 License
 MIT License
+
 
 
 
