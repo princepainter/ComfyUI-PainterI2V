@@ -28,9 +28,10 @@ motion_amplitude: 1.15（推荐起始值）
 表格
 复制
 运动类型	推荐参数	示例提示词
+
 快速（跑步/跳跃）	1.25-1.35	"快速向前奔跑"
 正常（走路/挥手）	1.10-1.20	"流畅地行走"
-慢动作特效	0.8-0.9	"缓慢移动"
+
 提示词优化：
 明确描述运动节奏，如"快速奔跑"、"流畅行走"
 避免模糊描述如"移动"、"走动"
@@ -100,7 +101,7 @@ Scene-Specific Settings:
 Motion Type	Recommended Value	Example Prompt
 Fast (Running/Jumping)	1.25-1.35	"quickly running forward"
 Normal (Walking/Waving)	1.10-1.20	"smoothly walking"
-Slow Motion Effect	0.8-0.9	"moving slowly"
+
 Prompt Tips:
 Clearly describe motion rhythm (e.g., "quickly running", "smoothly walking")
 Avoid vague descriptions like "moving" or "walking"
@@ -127,6 +128,7 @@ Example workflow (JSON)
 Sample input/output
 📄 License
 MIT License
+
 
 
 
