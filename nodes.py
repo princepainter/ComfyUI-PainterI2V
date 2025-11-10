@@ -7,8 +7,7 @@ from typing_extensions import override
 
 class PainterI2V(io.ComfyNode):
     """
-    Wan2.2 图生视频增强节点 - 解决4步LoRA慢动作问题
-    专为单帧输入优化，提升运动幅度，保持画面亮度稳定
+    An enhanced Wan2.2 Image-to-Video node specifically designed to fix the slow-motion issue in 4-step LoRAs (like lightx2v).
     """
     
     @classmethod
@@ -113,5 +112,6 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "PainterI2V": "🎨 PainterI2V (Wan2.2 慢动作修复)",
+    "PainterI2V": "PainterI2V (Wan2.2 Slow-Motion Fix)",
 }
+
