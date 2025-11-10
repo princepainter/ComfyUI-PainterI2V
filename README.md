@@ -1,14 +1,14 @@
-# ComfyUI-Painterl2V
+# ComfyUI-PainterI2V
 
 此节点由抖音博主：绘画小子 制作。
 
-Wan2.2 固生视频增强节点，专门针对 4 步 LoRA（如 lightx2v）的慢动作问题进行优化。
+Wan2.2 图生视频增强节点，专门针对4步LoRA（如 lightx2v）的慢动作问题进行优化。
 
 ## 🛠 解决的问题
 
 - ✅ 减少慢动作拖影：提升运动幅度 15-30%
 - ✅ 保持画面亮度：增强算法不破坏亮度分布
-- ✅ 单帧输入优化：专为单帧图生视频设计
+- ✅ 单帧输入优化：专为wan2.2单帧图生视频设计
 - ✅ 即插即用：完全兼容原版 Wan2.2 工作流
 
 ## 📦 安装
@@ -16,7 +16,7 @@ Wan2.2 固生视频增强节点，专门针对 4 步 LoRA（如 lightx2v）的�
 ### 方法 1: ComfyUI Manager（推荐）
 
 1. 打开 ComfyUI Manager  
-2. 搜索 Painterl2V  
+2. 搜索 PainterI2V  
 3. 点击安装  
 
 ### 方法 2: 手动安装
@@ -26,7 +26,7 @@ Wan2.2 固生视频增强节点，专门针对 4 步 LoRA（如 lightx2v）的�
 cd ComfyUI/custom_nodes
 
 # 克隆仓库
-git clone https://github.com/princepainter/ComfyUI-Painterl2V.git
+git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 ```
 # 重启ComfyUI
 
@@ -34,7 +34,7 @@ git clone https://github.com/princepainter/ComfyUI-Painterl2V.git
 
 ### 替换节点
 
-在工作流中将 `WanImageToVideo` 替换为 `Painterl2V`
+在工作流中将 `WanImageToVideo` 替换为 `PainterI2V`
 
 ### 参数设置
 
@@ -85,21 +85,21 @@ git clone https://github.com/princepainter/ComfyUI-Painterl2V.git
 
 This node is created by Douyin creator: 绘画小子
 
-A video enhancement node for Wan2.2 Image-to-Video, specifically optimized to address the slow-motion issue in 4-step LoRAs (e.g., lightx2v).
+PainterI2V node that specifically fixes the slow-motion issue in 4-step LoRAs (e.g., lightx2v).
 
 ## 🛠 Problems Solved
 
-- ✅ Reduces motion blur in slow-motion: boosts motion amplitude by 15–30%  
-- ✅ Preserves brightness: enhancement algorithm does not distort luminance distribution  
-- ✅ Optimized for single-frame input: designed specifically for image-to-video generation  
-- ✅ Plug-and-play: fully compatible with the original Wan2.2 workflow  
+- ✅ Reduces Slow-Motion Drag: Increases motion amplitude by 15-30% 
+- ✅ Maintains Brightness Stability: Enhancement algorithm preserves brightness distribution  
+- ✅ Optimized for Single Frame: Designed specifically for single-frame image-to-video workflows  
+- ✅ Plug & Play: Fully compatible with original Wan2.2 workflows 
 
 ## 📦 Installation
 
 ### Method 1: ComfyUI Manager (Recommended)
 
 1. Open ComfyUI Manager  
-2. Search for **Painterl2V**  
+2. Search for **PainterI2V**  
 3. Click **Install**  
 
 ### Method 2: Manual Installation
@@ -109,13 +109,13 @@ A video enhancement node for Wan2.2 Image-to-Video, specifically optimized to ad
 cd ComfyUI/custom_nodes
 
 # Clone the repository
-git clone https://github.com/princepainter/ComfyUI-Painterl2V.git
+git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 ```
 ## 💡 Usage Guide
 
 ### Replace the Node
 
-In your workflow, replace `WanImageToVideo` with `Painterl2V`.
+In your workflow, replace `WanImageToVideo` with `PainterI2V`.
 
 ### Parameter Settings
 
@@ -166,3 +166,4 @@ In your workflow, replace `WanImageToVideo` with `Painterl2V`.
 If you find this project helpful, please give it a star ⭐ to show your support!
 </div>
 # Restart ComfyUI
+
