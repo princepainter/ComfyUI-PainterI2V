@@ -11,30 +11,31 @@ Wan2.2 图生视频增强节点，专门针对4步LoRA（如 lightx2v）的慢�
 
   ## 和wan2.2官方节点效果对比
 
-https://github.com/user-attachments/assets/77004b5a-24f0-49a3-bbaa-75919a394e00
+<table>
+  <tr>
+    <td><img src="image/wan2-2_00003.gif" alt="图1" width="300"></td>
+    <td><img src="image/wan2-2_00004.gif" alt="图2" width="300"></td>
+    <td><img src="image/wan2-2_00005.gif" alt="图3" width="300"></td>
+  </tr>
+  <tr>
+    <td>motion_amplitude=1.2</td>
+    <td>motion_amplitude=1.15</td>
+    <td>motion_amplitude=1.15</td>
+  </tr>
+  <tr>
+    <td><img src="image/wan2-2_00006.gif" alt="图4" width="300"></td>
+    <td><img src="image/wan2-2_00007.gif" alt="图5" width="300"></td>
+    <td><img src="image/wan2-2_00008.gif" alt="图6" width="300"></td>
+  </tr>
+  <tr>
+    <td>motion_amplitude=1.5</td>
+    <td>motion_amplitude=1.2</td>
+    <td>motion_amplitude=1.15</td>
+  </tr>
+</table>
 
 
-https://github.com/user-attachments/assets/87b299a1-5f8c-4894-b494-9ab77e472f7d
-
-
-https://github.com/user-attachments/assets/273999af-095a-46b7-be3c-045803a57679
-
-
-https://github.com/user-attachments/assets/39ed2c1c-8d71-41e5-8874-183218e56ffa
-
-
-https://github.com/user-attachments/assets/41caf343-b57d-4535-9899-2e64185b0624
-
-
-https://github.com/user-attachments/assets/8b27e4ee-fd46-4726-936e-5d3f960133bd
-
-
-
-
-
-
-
-  
+ 
 ## 节点特点
 - 单帧输入优化：专为wan2.2单帧图生视频设计
 - 即插即用：完全兼容原版 Wan2.2 工作流
@@ -195,6 +196,7 @@ In your workflow, replace `WanImageToVideo` with `PainterI2V`.
 If you find this project helpful, please give it a star ⭐ to show your support!
 </div>
 # Restart ComfyUI
+
 
 
 
