@@ -35,6 +35,7 @@ git clone https://github.com/princepainter/ComfyUI-PainterI2V.git
 ### 替换节点
 
 在工作流中将 `WanImageToVideo` 替换为 `PainterI2V`
+![替换原节点](image/QQ截图20251110095134.jpg)
 
 ### 参数设置
 
@@ -166,5 +167,6 @@ In your workflow, replace `WanImageToVideo` with `PainterI2V`.
 If you find this project helpful, please give it a star ⭐ to show your support!
 </div>
 # Restart ComfyUI
+
 
 
